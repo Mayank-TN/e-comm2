@@ -8,14 +8,15 @@
     <title>E-Commerce Project</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div id="EcommerceContainer">
+    <div id="EcommerceContainer"  onclick={addToCart(event)}>
         <header>
             <ul class="header">
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="#">STORE</a></li>
                 <li><a href="./about.html">ABOUT</a></li>
-                <a href="#cart" class="cart-holder">cart<span class="cart-number">0</span></a>
+                <a href="#cart" class="cart-holder" onclick={showCart()}>cart<span class="cart-number">0</span></a>
             </ul>
             <h1>The Generics</h1>
         </header>
@@ -27,9 +28,9 @@
                     <div class="image-container">
                         <img class="prod-images" src="./img/Album1.jpg" alt="">
                     </div>
-                                    <div class="prod-details">
+                    <div class="prod-details">
                         <span>$<span>12.99</span></span>
-                        <button class="shop-item-button" type="button">ADD TO CART</button>
+                        <button id='album1 btn'class="shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div id="album2">
@@ -37,9 +38,9 @@
                     <div class="image-container">
                         <img class="prod-images" src="./img/Album2.jpg" alt="">
                     </div>
-                                    <div class="prod-details">
+                    <div class="prod-details">
                         <span>$<span>14.99</span></span>
-                        <button class="shop-item-button" type="button">ADD TO CART</button>
+                        <button id='album2 btn'class="shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div id="album3">
@@ -47,9 +48,9 @@
                     <div class="image-container">
                         <img class="prod-images" src="./img/Album3.jpg" alt="">
                     </div>
-                                    <div class="prod-details">
+                    <div class="prod-details">
                         <span>$<span>9.99</span></span>
-                        <button class="shop-item-button" type="button">ADD TO CART</button>
+                        <button id='album3 btn' class="shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div id="album4">
@@ -57,9 +58,9 @@
                     <div class="image-container">
                         <img class="prod-images" src="./img/Album4.jpg" alt="">
                     </div>
-                                    <div class="prod-details">
+                    <div class="prod-details">
                         <span>$<span>19.99</span></span>
-                        <button class="shop-item-button" type="button">ADD TO CART</button>
+                        <button id='album4 btn' class="shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
             </div>
@@ -73,9 +74,9 @@
                     <div class="image-container">
                         <img class="prod-images" src="./img/tshirt.jpg" alt="">
                     </div>
-                                <div class="prod-details">
+                    <div class="prod-details">
                         <span>$<span>19.99</span></span>
-                        <button class="shop-item-button" type="button">ADD TO CART</button>
+                        <button class="shop-item-button" id="t-shirt btn" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div id="coffee-cup">
@@ -83,17 +84,17 @@
                     <div class="image-container">
                         <img class="prod-images" src="./img/coffee.jpg" alt="">
                     </div>
-                                <div class="prod-details">
+                    <div class="prod-details">
                         <span>$<span>6.99</span></span>
-                        <button class="shop-item-button" type="button">ADD TO CART</button>
+                        <button class="shop-item-button" id="coffee-cup btn" type="button">ADD TO CART</button>
                     </div>
                 </div>
             </div>
 
         </section>
-        <section id="cart" class="container">
+        <section id="cart" class="container" style="display: none;">
             <h2>CART</h2>
-            <button class="cancel">X</button>
+            <button class="cancel" onclick={hideCart()}>X</button>
             <div class="cart-row cart-header">
                 <span class="cart-item cart-column">ITEM</span>
                 <span class="cart-price cart-column">PRICE</span>
@@ -121,8 +122,8 @@
                         <input type="text">
                         <button>REMOVE</button>
                     </span>
-                </div> -->
-            </div>
+                </div>
+            </div> -->
             <div class="cart-total">
                 <span>
                     <span class="total-title"> <strong>Total</strong>
@@ -133,10 +134,10 @@
             <button class="purchase-btn" type="button">PURCHASE</button>
         </section>
 
-        <button class="cart-btn-bottom"> <a href="#cart" class="cart-bottom">See the cart</a></button>
+        <button class="cart-btn-bottom"> <a href="#cart" class="cart-bottom" onclick={showCart()}>See the cart</a></button>
     </div>
     <!-- Toggle notification -->
-    <div id="container"></div>
+    <div id="container" class="notification" style="display: none;"></div>
     <footer>
         <div class="footer-title">
             The Generics
@@ -144,18 +145,20 @@
         <div class="footer-icons">
             <ul>
                 <li><a href="https://www.youtube.com">
-                    <img src="./img/6260efc8fc9a9002669d2f4ad9956cc0.jpg" alt="">
-                </a></li>
+                      
+                    </a></li>
                 <li><a href="https://spotify.com">
-                    <img src="./img/Spotify Logo.png" alt="">
-                </a></li>
+                    
+                    </a></li>
                 <li><a href="https://facebook.com">
-                    <img src="./img/Facebook Logo.png" alt="">
-                </a></li>
+                    
+                    </a></li>
             </ul>
         </div>
     </footer>
 
-</body>
 
+    <script type="text/javascript" src="../index.js">
+    </script>
+</body>
 </html>
