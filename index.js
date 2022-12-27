@@ -105,3 +105,16 @@ function hideCart() {
 function showCart() {
     cart.style.display = 'block';
 }
+
+function purchaseCart(){
+    if(cartArray.length===0){
+        alert('Nothing to purchase')
+    }
+    else{
+        let array = [];
+        cartArray = [...array];
+        cartTotal.innerText = 0;
+        cartNumber.innerText = cartArray.length;
+        alert('Items purchased successfully')
+    }
+}
